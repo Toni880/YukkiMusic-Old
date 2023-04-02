@@ -56,9 +56,6 @@ welcome_captcha_group = 2
 @app.on_message(filters.new_chat_members, group=welcome_captcha_group)
 async def welcome(_, message: Message):
     chat_id = message.chat.id
-    if not await add_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nrebeles is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
-        return await app.leave_chat(chat_id)
     for member in message.new_chat_members:
         try:
             if member.id in OWNER:
