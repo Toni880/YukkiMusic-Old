@@ -19,8 +19,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, Audio
 from pytgcalls.types.input_stream import InputAudioStream, InputStream
 from Yukki import dbb, app, BOT_USERNAME, BOT_ID, ASSID, ASSNAME, ASSUSERNAME, ASSMENTION
-from ..YukkiUtilities.tgcallsrun import (yukki, download, clear, get, is_empty, put, task_done, ASS_ACC)
-from Yukki.converter.converter import convert
+from ..YukkiUtilities.tgcallsrun import (yukki, download, clear, get, is_empty, put, task_done, ASS_ACC, convert)
 from Yukki.YukkiUtilities.database.queue import (get_active_chats, is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
 from Yukki.YukkiUtilities.database.onoff import (is_on_off, add_on, add_off)
 from Yukki.YukkiUtilities.database.chats import (get_served_chats, is_served_chat, add_served_chat, get_served_chats)
